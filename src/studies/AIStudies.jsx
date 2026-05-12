@@ -492,7 +492,7 @@ export function CS2Payroll() {
 export function HowFramework() {
   return (
     <>
-      <section id="how" style={{ padding: '6vw var(--mg) 0', borderTop: '1px solid #E0E0E0' }}>
+      <section id="how" style={{ padding: '6vw var(--mg) 0' }}>
         <span style={{ fontFamily: MF, fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#888' }}>Framework</span>
         <h2 style={{ fontFamily: HF, fontSize: 'clamp(3rem, 8vw, 7.5rem)', lineHeight: 0.92, letterSpacing: '0.01em', margin: '1rem 0 0' }}>
           How I Work:<br />Think, Shape, Realize
