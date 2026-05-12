@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { flushSync } from 'react-dom'
-import { ERAS } from './constants.js'
+import { ERAS, ERA_CARDS } from './constants.js'
 import { HomePage } from './pages/HomePage.jsx'
 import { EraPage } from './pages/EraPage.jsx'
 import { StudyPage } from './pages/StudyPage.jsx'
@@ -276,6 +276,9 @@ export default function CaseStudy() {
           dark={true}
           showInline={false}
           pageKey={`${era}-${study}`}
+          studyId={view === 'study' ? study : null}
+          eraStudies={view === 'study' ? (ERA_CARDS[era] || []) : []}
+          onStudyNav={(id) => navigate(`${era}/${id}`, 'fade')}
         />
       )}
 

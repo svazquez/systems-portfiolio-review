@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { ERAS } from '../constants.js'
 import { HF, MF, BF } from '../shared.jsx'
 
-export function EraTimeline({ activeEra, onSwitch, onHome, stuck, dark, showInline = true, pageKey }) {
+export function EraTimeline({ activeEra, onSwitch, onHome, stuck, dark, showInline = true, pageKey, studyId = null, eraStudies = [], onStudyNav }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [currentDark, setCurrentDark] = useState(dark)
   const pulseEls = useRef([])
@@ -46,11 +46,17 @@ export function EraTimeline({ activeEra, onSwitch, onHome, stuck, dark, showInli
   const pillColor  = currentDark ? '#fff'                    : '#000'
   const activeLabel = ERAS.find(e => e.id === activeEra)?.label || 'Portfolio'
 
+  // Study nav context
+  const studyIdx   = eraStudies.findIndex(s => s.id === studyId)
+  const prevStudy  = studyIdx > 0                       ? eraStudies[studyIdx - 1] : null
+  const nextStudy  = studyIdx < eraStudies.length - 1   ? eraStudies[studyIdx + 1] : null
+  const curStudy   = eraStudies[studyIdx] || null
+
   return (
     <>
       {/* ── Floating pill nav (appears when stuck=true) ── */}
       <div className="pill-nav-wrap era-pill-vt" style={{
-        position: 'fixed', top: 16, left: '50%',
+        position: 'fixed', top: 24, left: '50%',
         transform: stuck ? 'translateX(-50%) translateY(0) scale(1)' : 'translateX(-50%) translateY(-12px) scale(0.97)',
         width: 'calc(100% - 20vw)', zIndex: 200,
         borderRadius: 20,
@@ -93,11 +99,50 @@ export function EraTimeline({ activeEra, onSwitch, onHome, stuck, dark, showInli
                 </button>
               ))}
             </div>
+
+            {/* Desktop study prev/next — only on study pages */}
+            {studyId && curStudy && (
+              <div className="pill-desktop-links" style={{ display: 'flex', alignItems: 'center', gap: 6, flexShrink: 0 }}>
+                <div style={{ width: 1, height: 16, background: pillColor, opacity: 0.15, marginRight: 4 }} />
+                <button
+                  onClick={() => prevStudy && onStudyNav(prevStudy.id)}
+                  disabled={!prevStudy}
+                  style={{ fontFamily: MF, fontSize: 13, background: 'none', border: 'none', cursor: prevStudy ? 'pointer' : 'default', color: pillColor, opacity: prevStudy ? 0.55 : 0.2, padding: '0 2px', lineHeight: 1, transition: 'opacity 0.18s ease' }}
+                  onMouseEnter={e => { if (prevStudy) e.currentTarget.style.opacity = 1 }}
+                  onMouseLeave={e => { e.currentTarget.style.opacity = prevStudy ? 0.55 : 0.2 }}
+                >‹</button>
+                <span style={{ fontFamily: MF, fontSize: 'clamp(9px,1vw,11px)', letterSpacing: '0.12em', textTransform: 'uppercase', color: pillColor, opacity: 0.85, whiteSpace: 'nowrap' }}>
+                  {curStudy.label}
+                </span>
+                <button
+                  onClick={() => nextStudy && onStudyNav(nextStudy.id)}
+                  disabled={!nextStudy}
+                  style={{ fontFamily: MF, fontSize: 13, background: 'none', border: 'none', cursor: nextStudy ? 'pointer' : 'default', color: pillColor, opacity: nextStudy ? 0.55 : 0.2, padding: '0 2px', lineHeight: 1, transition: 'opacity 0.18s ease' }}
+                  onMouseEnter={e => { if (nextStudy) e.currentTarget.style.opacity = 1 }}
+                  onMouseLeave={e => { e.currentTarget.style.opacity = nextStudy ? 0.55 : 0.2 }}
+                >›</button>
+              </div>
+            )}
+
             {/* Mobile header */}
-            <div className="pill-mobile-header" style={{ display: 'none', alignItems: 'center', gap: '0.625rem', flex: 1, justifyContent: 'flex-end' }}>
-              <span style={{ fontFamily: MF, fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: pillColor, opacity: 0.85, whiteSpace: 'nowrap' }}>
-                {activeLabel}
-              </span>
+            <div className="pill-mobile-header" style={{ display: 'none', alignItems: 'center', gap: '0.5rem', flex: 1, justifyContent: 'flex-end' }}>
+              {studyId && curStudy ? (
+                /* Study pages: show ‹ name › */
+                <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                  <button onClick={() => prevStudy && onStudyNav(prevStudy.id)} disabled={!prevStudy}
+                    style={{ fontFamily: MF, fontSize: 13, background: 'none', border: 'none', cursor: prevStudy ? 'pointer' : 'default', color: pillColor, opacity: prevStudy ? 0.7 : 0.2, padding: '0 2px', lineHeight: 1 }}>‹</button>
+                  <span style={{ fontFamily: MF, fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: pillColor, opacity: 0.85, whiteSpace: 'nowrap' }}>
+                    {curStudy.label}
+                  </span>
+                  <button onClick={() => nextStudy && onStudyNav(nextStudy.id)} disabled={!nextStudy}
+                    style={{ fontFamily: MF, fontSize: 13, background: 'none', border: 'none', cursor: nextStudy ? 'pointer' : 'default', color: pillColor, opacity: nextStudy ? 0.7 : 0.2, padding: '0 2px', lineHeight: 1 }}>›</button>
+                </div>
+              ) : (
+                /* Era pages: show era label */
+                <span style={{ fontFamily: MF, fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: pillColor, opacity: 0.85, whiteSpace: 'nowrap' }}>
+                  {activeLabel}
+                </span>
+              )}
               <button onClick={() => setMenuOpen(o => !o)} aria-label={menuOpen ? 'Close' : 'Menu'}
                 style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px', color: pillColor, display: 'flex', alignItems: 'center', flexShrink: 0 }}>
                 {menuOpen
