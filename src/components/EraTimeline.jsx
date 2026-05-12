@@ -50,7 +50,7 @@ export function EraTimeline({ activeEra, onSwitch, onHome, stuck, dark, showInli
     <>
       {/* ── Floating pill nav (appears when stuck=true) ── */}
       <div className="pill-nav-wrap era-pill-vt" style={{
-        position: 'fixed', top: 16, left: '50%',
+        position: 'fixed', top: 24, left: '50%',
         transform: stuck ? 'translateX(-50%) translateY(0) scale(1)' : 'translateX(-50%) translateY(-12px) scale(0.97)',
         width: 'calc(100% - 20vw)', zIndex: 200,
         borderRadius: 20,
