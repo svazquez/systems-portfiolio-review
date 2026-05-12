@@ -120,7 +120,7 @@ export function WP1MyADP() {
           <p style={{ fontFamily: BF, fontSize: 15, lineHeight: 1.8, fontWeight: 300, marginTop: '0.75rem' }}>The interface prioritized clarity, speed, continuity, and accessibility across different moments of use.</p>
           <Why text="Mobile workforce experiences become valuable when people can complete work in context instead of waiting to return to a desktop environment." />
         </div>
-        <Placeholder label="ADP Mobile: Approvals, Pay Statements, and Workforce Workflows" caption="Mobile experiences evolved from passive utilities into active workforce management tools." />
+        <CaseImg src="/assets/ADP Mobile Approvals Pay  Workflows.png" alt="ADP Mobile: Approvals, Pay Statements, and Workforce Workflows" caption="Mobile experiences evolved from passive utilities into active workforce management tools." />
       </section>
 
       <section style={{ padding: '5rem var(--mg) 0' }}>
