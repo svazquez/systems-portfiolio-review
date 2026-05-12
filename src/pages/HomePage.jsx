@@ -25,13 +25,13 @@ export function HomePage({ navigate }) {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', paddingBottom: '0rem', position: 'relative', zIndex: 1, maxWidth: 600 }}>
           <p style={{ fontFamily: BF, fontSize: 'clamp(0.9375rem, 1.4vw, 1.0625rem)', lineHeight: 1.8, fontWeight: 300, margin: 0 }}>
-            From media networks to institutional platforms to AI-native systems, I've helped organizations navigate major technology shifts and redesign how people and systems work together.
+            The hardest enterprise challenges aren't interface problems alone. They require rethinking how people, workflows, and systems operate together.
           </p>
           <p style={{ fontFamily: BF, fontSize: 'clamp(0.9375rem, 1.4vw, 1.0625rem)', lineHeight: 1.8, fontWeight: 300, margin: 0 }}>
-            The work spans publishing networks, trading platforms, workforce systems, and emerging AI-native experiences.
+            For over 15 years, I've led transformation initiatives across workforce technology, institutional finance, media ecosystems, and AI-native systems.
           </p>
           <p style={{ fontFamily: BF, fontSize: 'clamp(0.9375rem, 1.4vw, 1.0625rem)', lineHeight: 1.8, fontWeight: 300, margin: 0 }}>
-            Across each era, the focus was on simplifying complexity, connecting workflows, and building systems designed to scale.
+            From media networks to institutional platforms to AI-native experiences, my work has focused on helping organizations navigate major technology shifts and redesign how people and systems work together.
           </p>
           <p style={{ fontFamily: MF, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', margin: '2.5rem 0 0' }}>
             Select an era to explore the work.
