@@ -293,11 +293,10 @@ export function StudyPage({ eraId, studyId, navigate }) {
         @media (max-width: 900px) { .cs-dot-nav { display: none !important; } }
       `}</style>
 
-      <StudyTopBar eraId={eraId} studyId={studyId} navigate={navigate} />
       <StudyNav eraId={eraId} studyId={studyId} navigate={navigate} />
 
-      {/* Pill nav clearance: adds only the deficit when 6vw < 5.5rem (≈1467px breakpoint) */}
-      <div aria-hidden="true" style={{ height: 'max(0px, calc(5.5rem - 6vw))' }} />
+      {/* Pill nav clearance: guaranteed 2rem base + deficit when 6vw < 7rem (≈1867px breakpoint) */}
+      <div aria-hidden="true" style={{ height: 'max(2rem, calc(7rem - 6vw))' }} />
 
       <StudyContent />
 
