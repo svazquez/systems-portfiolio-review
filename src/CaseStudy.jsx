@@ -237,7 +237,7 @@ export default function CaseStudy() {
           .era-tl-grid button:nth-child(4) { order: 3; }
           .era-tl-connector-mobile {
             display: block !important;
-            top: calc(1.25rem + 83px); bottom: calc(1.5rem + 7px);
+            top: calc(1.25rem + 90px); bottom: calc(1.5rem + 10px);
             left: 1.5rem; right: calc(50% - 14px);
             border-top:    1px solid rgba(255,255,255,.2);
             border-right:  1px solid rgba(255,255,255,.2);
