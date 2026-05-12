@@ -238,12 +238,15 @@ function StudyBottomBar({ eraId, studyId, navigate }) {
 
   return (
     <nav className="study-bottom-bar" style={{
-      position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 200,
+      position: 'fixed', bottom: 'calc(16px + env(safe-area-inset-bottom))',
+      left: '50%', transform: 'translateX(-50%)',
+      width: 'calc(100% - 3rem)', zIndex: 200,
       background: 'rgba(18,18,18,0.92)',
       backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)',
-      borderTop: '1px solid rgba(255,255,255,0.10)',
-      paddingBottom: 'env(safe-area-inset-bottom)',
-      display: 'flex', alignItems: 'stretch', height: 56,
+      border: '1px solid rgba(255,255,255,0.12)',
+      borderRadius: 999,
+      boxShadow: '0 4px 24px rgba(0,0,0,0.35)',
+      display: 'flex', alignItems: 'stretch', height: 48, overflow: 'hidden',
     }}>
 
       {/* ‹ Prev */}
@@ -372,7 +375,7 @@ export function StudyPage({ eraId, studyId, navigate }) {
         .study-bottom-bar { display: none !important; }
         @media (max-width: 900px) {
           .study-bottom-bar { display: flex !important; }
-          .cs-root { padding-bottom: calc(56px + env(safe-area-inset-bottom)); }
+          .cs-root { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
         }
       `}</style>
 
