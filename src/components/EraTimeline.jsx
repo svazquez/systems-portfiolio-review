@@ -132,7 +132,7 @@ export function EraTimeline({ activeEra, onSwitch, onHome, stuck, dark, showInli
       }}>
         <div style={{ opacity: stuck ? 0 : 1, transition: 'opacity 0.2s ease' }}>
           <div className="era-inline-nav" style={{ border: '1px solid rgba(255,255,255,0.35)', borderRadius: 20, padding: '1rem 1.5rem 1.2rem', position: 'relative', overflow: 'hidden' }}>
-            <div className="era-tl-connector" style={{ position: 'absolute', bottom: 'calc(1.2rem + 7px)', left: 'calc(1.5rem + 7px)', right: 'calc(1.5rem + 7px)', height: 1, background: 'rgba(255,255,255,0.2)', pointerEvents: 'none' }} />
+            <div className="era-tl-connector" style={{ position: 'absolute', bottom: 'calc(1.2rem + 10px)', left: 'calc(1.5rem + 7px)', right: 'calc(1.5rem + 7px)', height: 1, background: 'rgba(255,255,255,0.2)', pointerEvents: 'none' }} />
             <div className="era-tl-connector-mobile" style={{ position: 'absolute', pointerEvents: 'none' }} />
             <div className="era-tl-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
               {ERAS.map(era => {
