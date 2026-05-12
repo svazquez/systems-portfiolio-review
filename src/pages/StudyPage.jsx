@@ -358,7 +358,8 @@ export function StudyPage({ eraId, studyId, navigate }) {
           .stats-row > div { border-right: none !important; border-top: 1px solid rgba(128,128,128,0.25) !important; }
           .dark-section .stats-row > div { border-top: 1px solid rgba(255,255,255,.12) !important; }
           .case-index { grid-template-columns: 1fr !important; }
-          .cs-root section { padding-top: 5rem !important; scroll-margin-top: 5rem !important; }
+          .cs-root section { padding-top: 2rem !important; scroll-margin-top: 2rem !important; }
+          .pill-clearance { height: 1rem !important; }
           .cs-dot-nav { display: none !important; }
           .nav-full-name { display: none; }
           .nav-short-name { display: inline; }
@@ -386,7 +387,7 @@ export function StudyPage({ eraId, studyId, navigate }) {
       <StudyBottomBar eraId={eraId} studyId={studyId} navigate={navigate} />
 
       {/* Pill nav clearance: guaranteed 2rem base + deficit when 6vw < 7rem (≈1867px breakpoint) */}
-      <div aria-hidden="true" style={{ height: 'max(2rem, calc(7rem - 6vw))' }} />
+      <div aria-hidden="true" className="pill-clearance" style={{ height: 'max(2rem, calc(7rem - 6vw))' }} />
 
       <StudyContent />
 
