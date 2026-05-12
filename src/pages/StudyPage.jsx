@@ -236,16 +236,19 @@ function StudyBottomBar({ eraId, studyId, navigate }) {
   const prevStudy  = idx > 0                  ? studies[idx - 1] : null
   const nextStudy  = idx < studies.length - 1 ? studies[idx + 1] : null
 
+  // Only render when there are multiple studies to navigate between
+  if (studies.length <= 1) return null
+
   return (
     <nav className="study-bottom-bar" style={{
       position: 'fixed', bottom: 'calc(16px + env(safe-area-inset-bottom))',
       left: '50%', transform: 'translateX(-50%)',
       width: 'calc(100% - 3rem)', zIndex: 200,
-      background: 'rgba(18,18,18,0.92)',
-      backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)',
-      border: '1px solid rgba(255,255,255,0.12)',
+      background: 'rgba(255,255,255,0.88)',
+      backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)',
+      border: '1px solid rgba(0,0,0,0.10)',
       borderRadius: 999,
-      boxShadow: '0 4px 24px rgba(0,0,0,0.35)',
+      boxShadow: '0 4px 24px rgba(0,0,0,0.12)',
       display: 'flex', alignItems: 'stretch', height: 48, overflow: 'hidden',
     }}>
 
@@ -257,12 +260,12 @@ function StudyBottomBar({ eraId, studyId, navigate }) {
           flex: 1, display: 'flex', alignItems: 'center', gap: 8,
           padding: '0 1.25rem',
           background: 'none', border: 'none', cursor: prevStudy ? 'pointer' : 'default',
-          opacity: prevStudy ? 1 : 0.25,
+          opacity: prevStudy ? 1 : 0.2,
         }}
       >
-        <span style={{ fontFamily: MF, fontSize: 16, color: '#fff', lineHeight: 1 }}>‹</span>
+        <span style={{ fontFamily: MF, fontSize: 16, color: '#000', lineHeight: 1 }}>‹</span>
         {prevStudy && (
-          <span style={{ fontFamily: MF, fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+          <span style={{ fontFamily: MF, fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.55)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
             {prevStudy.label}
           </span>
         )}
@@ -277,7 +280,7 @@ function StudyBottomBar({ eraId, studyId, navigate }) {
             style={{
               width: i === idx ? 16 : 5, height: 5,
               borderRadius: 3,
-              background: i === idx ? '#fff' : 'rgba(255,255,255,0.3)',
+              background: i === idx ? '#000' : 'rgba(0,0,0,0.2)',
               border: 'none', padding: 0, cursor: 'pointer',
               transition: 'width 0.25s ease, background 0.25s ease',
               flexShrink: 0,
@@ -294,15 +297,15 @@ function StudyBottomBar({ eraId, studyId, navigate }) {
           flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 8,
           padding: '0 1.25rem',
           background: 'none', border: 'none', cursor: nextStudy ? 'pointer' : 'default',
-          opacity: nextStudy ? 1 : 0.25,
+          opacity: nextStudy ? 1 : 0.2,
         }}
       >
         {nextStudy && (
-          <span style={{ fontFamily: MF, fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+          <span style={{ fontFamily: MF, fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.55)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
             {nextStudy.label}
           </span>
         )}
-        <span style={{ fontFamily: MF, fontSize: 16, color: '#fff', lineHeight: 1 }}>›</span>
+        <span style={{ fontFamily: MF, fontSize: 16, color: '#000', lineHeight: 1 }}>›</span>
       </button>
 
     </nav>
