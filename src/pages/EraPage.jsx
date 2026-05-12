@@ -75,7 +75,7 @@ export function EraPage({ eraId, navigate }) {
           <div style={{ height: 1, background: 'rgba(255,255,255,0.2)' }} />
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: `repeat(${cards.length}, 1fr)`, position: 'relative', zIndex: 1 }} className="case-index">
+        <div style={{ display: 'grid', gridTemplateColumns: `repeat(${Math.min(cards.length, 3)}, 1fr)`, position: 'relative', zIndex: 1 }} className="case-index">
           {cards.map(({ num, label, title, id }, i) => (
             <button key={id}
               onClick={() => navigate(`${eraId}/${id}`)}
