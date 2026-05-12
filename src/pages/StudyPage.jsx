@@ -374,7 +374,7 @@ export function StudyPage({ eraId, studyId, navigate }) {
           .dark-section .stats-row > div:nth-child(n+4) { border-top: 1px solid rgba(255,255,255,.12); }
           .stats-row > div { padding-left:1.25rem !important; padding-right:1.25rem !important; }
         }
-        @media (max-width: 900px) { .cs-dot-nav { display: none !important; } }
+        @media (max-width: 960px) { .cs-dot-nav { display: none !important; } }
         /* Bottom bar: mobile only */
         .study-bottom-bar { display: none !important; }
         @media (max-width: 900px) {

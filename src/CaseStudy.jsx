@@ -263,7 +263,7 @@ export default function CaseStudy() {
           .era-tl-label-l2          { display: inline; }
           .era-tl-label-l2::before  { content: ' '; }
         }
-        @media (max-width: 900px) { .cs-dot-nav { display: none !important; } }
+        @media (max-width: 960px) { .cs-dot-nav { display: none !important; } }
 
         /* ── Case index: responsive ── */
         @media (min-width: 641px) and (max-width: 1100px) {
