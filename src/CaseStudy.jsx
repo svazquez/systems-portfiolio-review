@@ -247,7 +247,10 @@ export default function CaseStudy() {
             width: 85%;
           }
           .era-tl-label-l2 { display: block !important; }
-          .era-node { transform: translateY(6px) !important; }
+          .era-tl-grid button:nth-child(1) .era-node,
+          .era-tl-grid button:nth-child(2) .era-node { transform: translateY(6px) !important; }
+          .era-tl-grid button:nth-child(3) .era-node,
+          .era-tl-grid button:nth-child(4) .era-node { transform: translateY(-4px) !important; }
           .pill-mobile-header span { font-size: 13px !important; }
           .pill-mobile-menu button { font-size: 12px !important; }
           .era-tl-label            { font-size: 15px !important; }
