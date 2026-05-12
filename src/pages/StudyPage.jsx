@@ -229,6 +229,83 @@ function StudyTopBar({ eraId, studyId, navigate }) {
   )
 }
 
+/* ── Mobile bottom bar — prev / position / next ── */
+function StudyBottomBar({ eraId, studyId, navigate }) {
+  const studies    = ERA_CARDS[eraId] || []
+  const idx        = studies.findIndex(s => s.id === studyId)
+  const prevStudy  = idx > 0                  ? studies[idx - 1] : null
+  const nextStudy  = idx < studies.length - 1 ? studies[idx + 1] : null
+
+  return (
+    <nav className="study-bottom-bar" style={{
+      position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 200,
+      background: 'rgba(18,18,18,0.92)',
+      backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)',
+      borderTop: '1px solid rgba(255,255,255,0.10)',
+      paddingBottom: 'env(safe-area-inset-bottom)',
+      display: 'flex', alignItems: 'stretch', height: 56,
+    }}>
+
+      {/* ‹ Prev */}
+      <button
+        onClick={() => prevStudy && navigate(`${eraId}/${prevStudy.id}`, 'fade')}
+        disabled={!prevStudy}
+        style={{
+          flex: 1, display: 'flex', alignItems: 'center', gap: 8,
+          padding: '0 1.25rem',
+          background: 'none', border: 'none', cursor: prevStudy ? 'pointer' : 'default',
+          opacity: prevStudy ? 1 : 0.25,
+        }}
+      >
+        <span style={{ fontFamily: MF, fontSize: 16, color: '#fff', lineHeight: 1 }}>‹</span>
+        {prevStudy && (
+          <span style={{ fontFamily: MF, fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            {prevStudy.label}
+          </span>
+        )}
+      </button>
+
+      {/* Position indicator */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '0 0.75rem', flexShrink: 0 }}>
+        {studies.map((s, i) => (
+          <button
+            key={s.id}
+            onClick={() => navigate(`${eraId}/${s.id}`, 'fade')}
+            style={{
+              width: i === idx ? 16 : 5, height: 5,
+              borderRadius: 3,
+              background: i === idx ? '#fff' : 'rgba(255,255,255,0.3)',
+              border: 'none', padding: 0, cursor: 'pointer',
+              transition: 'width 0.25s ease, background 0.25s ease',
+              flexShrink: 0,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Next › */}
+      <button
+        onClick={() => nextStudy && navigate(`${eraId}/${nextStudy.id}`, 'fade')}
+        disabled={!nextStudy}
+        style={{
+          flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 8,
+          padding: '0 1.25rem',
+          background: 'none', border: 'none', cursor: nextStudy ? 'pointer' : 'default',
+          opacity: nextStudy ? 1 : 0.25,
+        }}
+      >
+        {nextStudy && (
+          <span style={{ fontFamily: MF, fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            {nextStudy.label}
+          </span>
+        )}
+        <span style={{ fontFamily: MF, fontSize: 16, color: '#fff', lineHeight: 1 }}>›</span>
+      </button>
+
+    </nav>
+  )
+}
+
 /* ── StudyPage ── */
 export function StudyPage({ eraId, studyId, navigate }) {
   const StudyContent = STUDY_MAP[studyId]
@@ -291,9 +368,16 @@ export function StudyPage({ eraId, studyId, navigate }) {
           .stats-row > div { padding-left:1.25rem !important; padding-right:1.25rem !important; }
         }
         @media (max-width: 900px) { .cs-dot-nav { display: none !important; } }
+        /* Bottom bar: mobile only */
+        .study-bottom-bar { display: none !important; }
+        @media (max-width: 900px) {
+          .study-bottom-bar { display: flex !important; }
+          .cs-root { padding-bottom: calc(56px + env(safe-area-inset-bottom)); }
+        }
       `}</style>
 
       <StudyNav eraId={eraId} studyId={studyId} navigate={navigate} />
+      <StudyBottomBar eraId={eraId} studyId={studyId} navigate={navigate} />
 
       {/* Pill nav clearance: guaranteed 2rem base + deficit when 6vw < 7rem (≈1867px breakpoint) */}
       <div aria-hidden="true" style={{ height: 'max(2rem, calc(7rem - 6vw))' }} />
