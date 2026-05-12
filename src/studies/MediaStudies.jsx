@@ -206,7 +206,7 @@ export function MT3CBS() {
             <p style={{ fontFamily: BF, fontSize: 15, lineHeight: 1.8, fontWeight: 300, marginTop: '0.75rem' }}>The initiative began with CBS New York and later expanded across CBS markets nationwide.</p>
           </div>
         </div>
-        <Placeholder label="CBS Local homepage ecosystem and responsive article experiences" caption="Unified local city portals bringing together news, sports, video, radio, and live streaming into a connected digital experience." />
+        <CaseImg src="/assets/CBS Local homepage ecosystem and responsive article experiences.png" alt="CBS Local homepage ecosystem and responsive article experiences" caption="Unified local city portals bringing together news, sports, video, radio, and live streaming into a connected digital experience." />
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', padding: '3rem 0 2rem' }}>
           <div style={{ maxWidth: 720 }}>
             <Label>The Opportunity</Label>
