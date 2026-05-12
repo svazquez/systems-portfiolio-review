@@ -23,7 +23,7 @@ export function HomePage({ navigate }) {
           Serafin<br />Vazquez
         </h1>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', paddingBottom: '0rem', position: 'relative', zIndex: 1, maxWidth: 600 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem', paddingBottom: '0rem', position: 'relative', zIndex: 1, maxWidth: 600 }}>
           <p style={{ fontFamily: BF, fontSize: 'clamp(0.9375rem, 1.4vw, 1.0625rem)', lineHeight: 1.8, fontWeight: 300, margin: 0 }}>
             The hardest enterprise challenges aren't interface problems alone. They require rethinking how people, workflows, and systems operate together.
           </p>
