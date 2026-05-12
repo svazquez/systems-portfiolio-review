@@ -217,10 +217,19 @@ export default function CaseStudy() {
           .nav-short-name { display: inline; }
         }
 
-        /* ── Era timeline: mobile ── */
-        @media (max-width: 640px) {
+        /* ── Pill nav: switch to hamburger below 960px ── */
+        @media (max-width: 960px) {
           .pill-desktop-links { display: none !important; }
           .pill-mobile-header { display: flex !important; }
+        }
+        @media (min-width: 961px) {
+          .pill-mobile-header { display: none !important; }
+          .pill-mobile-menu   { display: none !important; }
+          .pill-nav-wrap, .pill-nav-inner { border-radius: 999px !important; }
+        }
+
+        /* ── Era timeline: mobile layout ── */
+        @media (max-width: 640px) {
           .era-tl-grid        { grid-template-columns: repeat(2,1fr) !important; row-gap: 1.5rem !important; }
           .era-tl-connector   { display: none !important; }
           .era-tl-btn         { min-height: 90px !important; }
@@ -246,12 +255,9 @@ export default function CaseStudy() {
           .cs-dot-nav { display: none !important; }
         }
         @media (min-width: 641px) {
-          .pill-mobile-header       { display: none !important; }
-          .pill-mobile-menu         { display: none !important; }
           .era-tl-connector-mobile  { display: none !important; }
           .era-tl-label-l2          { display: inline; }
           .era-tl-label-l2::before  { content: ' '; }
-          .pill-nav-wrap, .pill-nav-inner { border-radius: 999px !important; }
         }
         @media (max-width: 900px) { .cs-dot-nav { display: none !important; } }
 
