@@ -43,62 +43,10 @@ export function Footer() {
             color: '#fff',
             margin: 0,
           }}>
-            Serafin Vazquez
+            Systems Thinking
           </h2>
         </div>
 
-        {/* Right: contact buttons */}
-        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-          <a
-            href="mailto:serafin.vazquez@gmail.com"
-            className="contact-btn contact-btn-dark"
-            style={{
-              fontFamily: MF,
-              fontSize: 10,
-              letterSpacing: '0.16em',
-              textTransform: 'uppercase',
-              color: '#fff',
-              border: '1px solid rgba(255,255,255,0.35)',
-              borderRadius: 999,
-              padding: '0.55rem 1.25rem',
-              textDecoration: 'none',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              cursor: 'pointer',
-              background: 'none',
-              transition: 'border-color 0.25s ease',
-            }}
-          >
-            <span style={{ position: 'relative', zIndex: 1 }}>Email</span>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/serafinvazquez"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-btn contact-btn-dark"
-            style={{
-              fontFamily: MF,
-              fontSize: 10,
-              letterSpacing: '0.16em',
-              textTransform: 'uppercase',
-              color: '#fff',
-              border: '1px solid rgba(255,255,255,0.35)',
-              borderRadius: 999,
-              padding: '0.55rem 1.25rem',
-              textDecoration: 'none',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              cursor: 'pointer',
-              background: 'none',
-              transition: 'border-color 0.25s ease',
-            }}
-          >
-            <span style={{ position: 'relative', zIndex: 1 }}>LinkedIn</span>
-          </a>
-        </div>
       </div>
 
       {/* Bottom: copyright */}
@@ -110,7 +58,7 @@ export function Footer() {
         color: 'rgba(255,255,255,0.2)',
         margin: 0,
       }}>
-        © {new Date().getFullYear()} Serafin Vazquez
+        © {new Date().getFullYear()}
       </p>
 
     </footer>
