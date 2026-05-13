@@ -209,7 +209,7 @@ export default function CaseStudy() {
         .contact-btn-light:hover::before { clip-path: circle(142% at 50% 50%); }
         .contact-btn-light:hover span    { color: #fff; transition: color 0.25s ease; }
 
-        /* ── Nav name: Serafin on desktop, SV on mobile ── */
+        /* ── Nav name: full on desktop, short on mobile ── */
         .nav-full-name  { display: inline; }
         .nav-short-name { display: none; }
         @media (max-width: 640px) {

@@ -20,7 +20,7 @@ export function HomePage({ navigate }) {
         </p>
 
         <h1 style={{ fontFamily: HF, fontSize: 'clamp(4.25rem, 11.9vw, 11.9rem)', lineHeight: 0.88, letterSpacing: '-0.01em', margin: '0 0 1rem', maxWidth: '100%', position: 'relative', zIndex: 1 }}>
-          Serafin<br />Vazquez
+          Systems<br />Thinking
         </h1>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', paddingBottom: '0rem', position: 'relative', zIndex: 1, maxWidth: 600 }}>

@@ -239,7 +239,7 @@ export function CS1Hiring() {
         </div>
         <figure style={{ margin: '3rem calc(-1 * var(--mg)) 0', padding: 0 }}>
           <div style={{ position: 'relative' }}>
-            <img src="/assets/Apr 30, 2026, 06_23_17 PM.png" alt="ADP Meeting of the Minds keynote stage" style={{ width: '100%', display: 'block', objectFit: 'cover', maxHeight: '60vh' }} />
+            <img src="/assets/Keynote-stage.png" alt="ADP Meeting of the Minds keynote stage" style={{ width: '100%', display: 'block', objectFit: 'cover', maxHeight: '60vh' }} />
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.4) 25%, transparent 45%, transparent 55%, rgba(0,0,0,0.4) 75%, rgba(0,0,0,0.92) 100%)', pointerEvents: 'none' }} />
             <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none' }} xmlns="http://www.w3.org/2000/svg">
               <defs>

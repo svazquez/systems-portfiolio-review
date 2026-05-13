@@ -205,8 +205,8 @@ function StudyTopBar({ eraId, studyId, navigate }) {
         {/* Left: back to era */}
         <button onClick={() => navigate(eraId)}
           style={{ fontFamily: HF, fontSize: 20, letterSpacing: '0.05em', color: pillColor, background: 'none', border: 'none', cursor: 'pointer', padding: 0, flexShrink: 0 }}>
-          <span className="nav-full-name">Serafin</span>
-          <span className="nav-short-name">SV</span>
+          <span className="nav-full-name">Portfolio</span>
+          <span className="nav-short-name">P</span>
         </button>
 
         {/* Center: era + study label */}
