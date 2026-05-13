@@ -109,7 +109,13 @@ export function WP1MyADP() {
           ]} />
           <Why text="Employees do not think in modules. They think in moments, responsibilities, and actions they need to complete." />
         </div>
-        <CaseImg src="/assets/Things To Do — action center concepts.png" alt="Things To Do: action center concepts" caption="Task-oriented experiences helped employees and managers focus on actions instead of navigating disconnected systems." />
+        <figure style={{ margin: '2.5rem 0 0', padding: 0, maxWidth: 740 }}>
+          <div style={{ border: '1px solid #E5E7EB', background: '#fff', padding: '1rem 0 2rem' }}>
+            <p style={{ fontFamily: MF, fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#888', margin: '0 1.5rem 0.75rem' }}>Things To Do — Action Center</p>
+            <img src="/assets/Things To Do — action center concepts.png" alt="Things To Do: action center concepts" style={{ width: '100%', display: 'block' }} />
+          </div>
+          <figcaption style={{ fontFamily: MF, fontSize: 11, lineHeight: 1.6, color: '#666', paddingTop: '0.75rem' }}>Task-oriented experiences helped employees and managers focus on actions instead of navigating disconnected systems.</figcaption>
+        </figure>
       </section>
 
       <section style={{ padding: '5rem var(--mg) 0' }}>
@@ -150,7 +156,13 @@ export function WP1MyADP() {
           <p style={{ fontFamily: BF, fontSize: 15, lineHeight: 1.8, fontWeight: 300, marginTop: '0.75rem' }}>The challenge was maintaining coherence while supporting millions of employees across highly varied organizational structures and workforce scenarios.</p>
           <Why text="Large-scale workforce platforms require not only scalable technology, but scalable systems thinking, collaboration models, and operational alignment." />
         </div>
-        <Placeholder label="Design System Explorations: Platform Ecosystem and Organizational Frameworks" caption="Shared experience principles and systems thinking helped scale the platform across products and teams." darkCaption />
+        <figure style={{ margin: '2.5rem 0 6rem', padding: 0, maxWidth: 740 }}>
+          <div style={{ border: '1px solid #E5E7EB', background: '#fff', padding: '1rem 0 2rem' }}>
+            <p style={{ fontFamily: MF, fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#888', margin: '0 1.5rem 0.75rem' }}>Design System Explorations</p>
+            <img src="/assets/Design System Explorations Platform Ecosystem.png" alt="Design System Explorations: Platform Ecosystem and Organizational Frameworks" style={{ width: '100%', display: 'block' }} />
+          </div>
+          <figcaption style={{ fontFamily: MF, fontSize: 11, lineHeight: 1.6, color: '#666', paddingTop: '0.75rem' }}>Shared experience principles and systems thinking helped scale the platform across products and teams.</figcaption>
+        </figure>
       </section>
 
       {impact([
@@ -158,7 +170,7 @@ export function WP1MyADP() {
         { big: '1B+',        mid: 'annual logins across workforce experiences and services' },
         { big: 'Unified',    mid: 'payroll, HR, benefits, approvals, and workforce workflows connected into one platform experience' },
       ])}
-      <Reflection text="MyADP helped shift enterprise workforce software away from fragmented administrative systems toward more connected, employee-centered operational experiences. The work became less about isolated HR transactions and more about designing workforce systems that could support people across the everyday flow of work." />
+      <Reflection text="MyADP helped reposition workforce software from fragmented administrative tooling into a connected operational platform designed around employee actions, workflows, and everyday work moments." />
     </>
   )
 }

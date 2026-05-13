@@ -257,6 +257,7 @@ export default function CaseStudy() {
           .pill-nav-wrap { width: calc(100% - 4rem) !important; border-radius: 16px !important; }
           .pill-nav-inner { border-radius: 16px !important; }
           .cs-dot-nav { display: none !important; }
+          .era-intro-head { padding-top: 6rem !important; }
         }
         @media (min-width: 641px) {
           .era-tl-connector-mobile  { display: none !important; }

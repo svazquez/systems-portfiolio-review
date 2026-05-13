@@ -205,8 +205,8 @@ function StudyTopBar({ eraId, studyId, navigate }) {
         {/* Left: back to era */}
         <button onClick={() => navigate(eraId)}
           style={{ fontFamily: HF, fontSize: 20, letterSpacing: '0.05em', color: pillColor, background: 'none', border: 'none', cursor: 'pointer', padding: 0, flexShrink: 0 }}>
-          <span className="nav-full-name">Portfolio</span>
-          <span className="nav-short-name">P</span>
+          <span className="nav-full-name">Trevor</span>
+          <span className="nav-short-name">TN</span>
         </button>
 
         {/* Center: era + study label */}
@@ -353,13 +353,17 @@ export function StudyPage({ eraId, studyId, navigate }) {
           50%     { box-shadow: 0 0 0 4px rgba(255,255,255,.12); }
         }
         .stats-row { display: grid; }
+        .stats-row > div { text-align: center; display: flex; flex-direction: column; align-items: center; }
+        .stats-row > div > div:first-child { justify-content: center; }
         @media (max-width: 640px) {
           .stats-row { grid-template-columns: 1fr !important; }
-          .stats-row > div { border-right: none !important; border-top: 1px solid rgba(128,128,128,0.25) !important; }
-          .dark-section .stats-row > div { border-top: 1px solid rgba(255,255,255,.12) !important; }
+          .stats-row > div { border-right: none !important; border-top: 1px solid rgba(128,128,128,0.25) !important; text-align: center !important; padding: 2rem 1.5rem !important; display: flex !important; flex-direction: column !important; align-items: center !important; }
+          .stats-row > div:first-child { border-top: none !important; }
+          .dark-section .stats-row > div { border-top: 1px solid rgba(255,255,255,.12) !important; text-align: center !important; padding: 2rem 1.5rem !important; }
+          .dark-section .stats-row > div:first-child { border-top: none !important; }
           .case-index { grid-template-columns: 1fr !important; }
           .cs-root section { padding-top: 2rem !important; scroll-margin-top: 2rem !important; }
-          .pill-clearance { height: 1rem !important; }
+          .pill-clearance { height: 4rem !important; }
           .cs-dot-nav { display: none !important; }
           .nav-full-name { display: none; }
           .nav-short-name { display: inline; }
@@ -379,7 +383,7 @@ export function StudyPage({ eraId, studyId, navigate }) {
         .study-bottom-bar { display: none !important; }
         @media (max-width: 900px) {
           .study-bottom-bar { display: flex !important; }
-          .cs-root { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+          .study-footer-wrap { padding-bottom: calc(80px + env(safe-area-inset-bottom)) !important; }
         }
       `}</style>
 
@@ -391,7 +395,9 @@ export function StudyPage({ eraId, studyId, navigate }) {
 
       <StudyContent />
 
-      <Footer />
+      <div className="study-footer-wrap" style={{ background: '#000' }}>
+        <Footer />
+      </div>
     </div>
   )
 }

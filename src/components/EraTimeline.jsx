@@ -80,8 +80,8 @@ export function EraTimeline({ activeEra, onSwitch, onHome, stuck, dark, showInli
           <div style={{ height: 52, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 1.25rem 0 1.5rem' }}>
             <button onClick={onHome || (() => {})}
               style={{ fontFamily: HF, fontSize: 20, letterSpacing: '0.05em', color: pillColor, background: 'none', border: 'none', cursor: 'pointer', padding: 0, flexShrink: 0, transition: 'color 0.3s ease' }}>
-              <span className="nav-full-name">Portfolio</span>
-              <span className="nav-short-name">P</span>
+              <span className="nav-full-name">Trevor</span>
+              <span className="nav-short-name">TN</span>
             </button>
             {/* Desktop era links */}
             <div className="pill-desktop-links" style={{ display: 'flex', gap: 'clamp(1rem, 2.5vw, 2.5rem)' }}>

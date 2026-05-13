@@ -61,7 +61,7 @@ export function EraPage({ eraId, navigate }) {
        : <AnimatedSystemGraph ref={svgRef} />}
 
         {/* Era intro */}
-        <div style={{ padding: '8rem 0 2.5rem', maxWidth: 760, marginBottom: '2.5rem', position: 'relative', zIndex: 1 }}>
+        <div className="era-intro-head" style={{ padding: '8rem 0 2.5rem', maxWidth: 760, marginBottom: '2.5rem', position: 'relative', zIndex: 1 }}>
           <h2 style={{ fontFamily: HF, fontSize: 'clamp(2rem, 4vw, 3.25rem)', color: '#fff', lineHeight: 1.05, letterSpacing: '0.01em', margin: '0 0 1.5rem' }}>
             {intro.title}
           </h2>

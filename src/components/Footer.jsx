@@ -43,7 +43,7 @@ export function Footer() {
             color: '#fff',
             margin: 0,
           }}>
-            Systems Thinking
+            Trevor Nicholson
           </h2>
         </div>
 
@@ -58,7 +58,7 @@ export function Footer() {
         color: 'rgba(255,255,255,0.2)',
         margin: 0,
       }}>
-        © {new Date().getFullYear()}
+        © {new Date().getFullYear()} Trevor Nicholson
       </p>
 
     </footer>

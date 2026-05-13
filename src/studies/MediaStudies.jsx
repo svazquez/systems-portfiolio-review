@@ -224,7 +224,13 @@ export function MT3CBS() {
             <p style={{ fontFamily: BF, fontSize: 15, lineHeight: 1.8, fontWeight: 300, marginTop: '0.75rem' }}>The opportunity was to create a unified publishing and streaming platform that could modernize CBS local media operations while preserving the identity and trust of each market.</p>
           </div>
         </div>
-        <Placeholder label="Legacy fragmented local media workflows and disconnected properties" caption="Prior to convergence, television, radio, streaming, and digital publishing experiences operated independently across markets." />
+        <figure style={{ margin: '2.5rem 0 0', padding: 0, maxWidth: 740 }}>
+          <div style={{ border: '1px solid #E5E7EB', background: '#fff', padding: '1rem 0 0' }}>
+            <p style={{ fontFamily: MF, fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#888', margin: '0 1.5rem 0.75rem' }}>Local Media Ecosystem — Legacy State</p>
+            <img src="/assets/Legacy fragmented local media workflows and disconnected properties.png" alt="Legacy fragmented local media workflows and disconnected properties" style={{ width: '100%', display: 'block' }} />
+          </div>
+          <figcaption style={{ fontFamily: MF, fontSize: 11, lineHeight: 1.6, color: '#666', paddingTop: '0.75rem' }}>Prior to convergence, television, radio, streaming, and digital publishing experiences operated independently across markets.</figcaption>
+        </figure>
       </section>
 
       <div style={{ padding: '3rem var(--mg) 0' }}>
@@ -264,7 +270,6 @@ export function MT3CBS() {
             <p style={{ fontFamily: BF, fontSize: 15, lineHeight: 1.8, fontWeight: 300, marginTop: '0.75rem' }}>The work became less about websites and more about operational convergence across media platforms.</p>
           </div>
         </div>
-        <Placeholder label="Editorial planning, publishing workflows, and cross-platform media orchestration" caption="Early platform thinking explored how publishing, streaming, broadcast, and editorial workflows could operate together within unified local ecosystems." />
       </section>
 
       <section style={{ padding: '5rem var(--mg) 0' }}>
@@ -357,7 +362,7 @@ export function MT4Audio() {
             <p style={{ fontFamily: BF, fontSize: 15, lineHeight: 1.8, fontWeight: 300, marginTop: '0.75rem' }}>The work became less about building a companion app and more about designing a connected ecosystem where listeners, producers, and hosts could interact together during live broadcasts.</p>
           </div>
         </div>
-        <Placeholder label="Audio Roadshow mobile application concepts" caption="Mobile experiences allowed listeners to follow live shows, participate in polls, react to guests, and submit audio clips directly into broadcasts." />
+        <CaseImg src="/assets/Audio Roadshow mobile application concepts.png" alt="Audio Roadshow mobile application concepts" caption="Mobile experiences allowed listeners to follow live shows, participate in polls, react to guests, and submit audio clips directly into broadcasts." />
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', padding: '3rem 0 2rem' }}>
           <div style={{ maxWidth: 720 }}>
             <Label>The Opportunity</Label>
@@ -367,7 +372,6 @@ export function MT4Audio() {
             <p style={{ fontFamily: BF, fontSize: 15, lineHeight: 1.8, fontWeight: 300, marginTop: '0.75rem' }}>The opportunity was to create a connected real-time platform that modernized both audience participation experiences and producer operational tooling, without disrupting the speed and unpredictability of live radio.</p>
           </div>
         </div>
-        <Placeholder label="CBS Local Audio Roadshow: Integrated Audience Participation Experience" caption="Audio Roadshow connected live radio broadcasts with mobile participation, listener engagement, and web-based audience interaction systems." />
       </section>
 
       <div style={{ padding: '3rem var(--mg) 0' }}>
@@ -408,7 +412,6 @@ export function MT4Audio() {
             <p style={{ fontFamily: BF, fontSize: 15, lineHeight: 1.8, fontWeight: 300, marginTop: '0.75rem' }}>This led to a dual-system approach: operational studio tooling for producers and real-time participation experiences for audiences.</p>
           </div>
         </div>
-        <Placeholder label="Producer schedule management and live studio operations interface" caption="Operational tooling helped producers manage guests, show timing, polls, audience participation, and live broadcast coordination in real time." />
       </section>
 
       <section style={{ padding: '5rem var(--mg) 0' }}>
@@ -419,7 +422,7 @@ export function MT4Audio() {
           <p style={{ fontFamily: BF, fontSize: 15, lineHeight: 1.8, fontWeight: 300, marginTop: '0.75rem' }}>The interface needed to feel fast, lightweight, highly scannable, and operational under pressure.</p>
           <Why text="Participatory media experiences only work when operational systems behind the scenes can keep up with the speed of live production. The strongest audience experiences are powered by invisible operational infrastructure." />
         </div>
-        <Placeholder label="Producer Admin Interfaces: Scheduling, Guests, and Moderation" caption="Backend workflow systems gave producers real-time control over schedules, guests, polls, and audience participation during live broadcasts." />
+        <CaseImg src="/assets/Producer schedule management.png" alt="Producer Admin Interfaces: Scheduling, Guests, and Moderation" caption="Backend workflow systems gave producers real-time control over schedules, guests, polls, and audience participation during live broadcasts." />
       </section>
 
       <section style={{ padding: '5rem var(--mg) 0' }}>
@@ -430,7 +433,6 @@ export function MT4Audio() {
           <p style={{ fontFamily: BF, fontSize: 15, lineHeight: 1.8, fontWeight: 300, marginTop: '0.75rem' }}>The system also allowed producers to push real-time information directly into the app: current hosts, live topics, upcoming guests, active questions, and audience prompts, creating a continuous feedback loop between the studio and the audience.</p>
           <Why text="At the time, very few broadcast platforms allowed audiences to actively participate in live media experiences across both mobile and web ecosystems. Audio Roadshow explored participation models years before these interaction patterns became common across creator platforms, streaming ecosystems, and social audio products." />
         </div>
-        <Placeholder label="Mobile audience participation and live show interaction workflows" caption="The mobile experience allowed listeners to follow live broadcasts, participate in polls, submit audio responses, and engage with live show topics in real time." />
       </section>
 
       <section style={{ padding: '5rem var(--mg) 0', borderBottom: '1px solid #E0E0E0' }}>
@@ -440,7 +442,7 @@ export function MT4Audio() {
           <p style={{ fontFamily: BF, fontSize: 15, lineHeight: 1.8, fontWeight: 300, marginTop: '0.75rem' }}>Producers and hosts could immediately see audience reaction while shows were live on-air, connecting broadcast content, audience reaction, polling systems, listener participation, mobile engagement, and studio workflows into a single real-time ecosystem.</p>
           <Why text="The work explored early forms of second-screen interaction and participatory media years before these behaviors became mainstream across modern streaming and creator ecosystems." />
         </div>
-        <Placeholder label="Live poll results, audience sentiment, and participation dashboards" caption="Real-time polling and audience sentiment systems allowed producers and hosts to react to listener engagement during live broadcasts." />
+        <CaseImg src="/assets/audience participation.png" alt="Live poll results, audience sentiment, and participation dashboards" caption="Real-time polling and audience sentiment systems allowed producers and hosts to react to listener engagement during live broadcasts." />
       </section>
 
       {impact([
@@ -448,7 +450,7 @@ export function MT4Audio() {
         { big: 'Multi-platform', mid: 'Mobile, web, and broadcast experiences connected into one system' },
         { big: 'Producer-first', mid: 'Moderation and publishing workflows streamlined through unified tooling' },
       ])}
-      <Reflection text="Audio Roadshow explored many of the interaction patterns that later became foundational across modern media platforms: second-screen participation, live audience sentiment, creator interaction, real-time polling, user-generated audio, and connected broadcast ecosystems. The work became less about extending radio onto mobile devices and more about designing systems where audiences, producers, and live broadcasts could participate together in real time." />
+      <Reflection text="Audio Roadshow explored how broadcast media could evolve from one-way publishing into participatory real-time systems where audiences, producers, and live programming operated as part of the same connected experience." />
     </>
   )
 }
